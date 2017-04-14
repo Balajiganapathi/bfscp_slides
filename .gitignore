@@ -7,3 +7,11 @@
 *.out
 *.snm
 *.toc
+*.pygtex
+
+_minted-template/
+*.lst
+*.sty
+*.vrb
+*.pyg
+*.pygstyle
