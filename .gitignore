@@ -15,3 +15,10 @@ _minted-template/
 *.vrb
 *.pyg
 *.pygstyle
+
+# temp files
+i.tex
+
+# vim
+*.swp
+*.swo

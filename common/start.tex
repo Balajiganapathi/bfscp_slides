@@ -1,0 +1,18 @@
+\documentclass{beamer}
+\usepackage{minted} % For code listing
+\usepackage{fancyvrb}
+
+% Useful macros
+% Display C/C++ codes
+\newenvironment{cppcode}[2]
+%[language=c++,caption=#2,numbers=left,numbersep=5pt,listingname=Code,label=#1,style=colorful]
+{\VerbatimEnvironment \begin{minted}{C++}}
+{\end{minted}}
+
+\usetheme{CambridgeUS}
+\usefonttheme{structurebold}
+
+% Before each section show outline with curent section bolded and only its subsections
+\AtBeginSection[]{\begin{frame}\frametitle{Outline}\tableofcontents[currentsection,hideothersubsections]\end{frame}}
+
+

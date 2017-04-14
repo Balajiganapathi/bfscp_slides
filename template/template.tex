@@ -1,44 +1,8 @@
-\documentclass{beamer}
-\usepackage{minted} % For code listing
-\usepackage{fancyvrb}
+\include{../common/start}
+\title[Template]{Template}
+\subtitle[Using beamer template]{Using beamer template for coding slides}
 
-% Useful macros
-% Display C/C++ codes
-\newenvironment{cppcode}[2]
-%[language=c++,caption=#2,numbers=left,numbersep=5pt,listingname=Code,label=#1,style=colorful]
-{\VerbatimEnvironment \begin{minted}{C++}}
-{\end{minted}}
-
-\newcommand{\cppinline}[1]
-
-
-
-\usetheme{CambridgeUS}
-\usefonttheme{structurebold}
-
-% Presentation metadata
-\title[Use template]{Using this template to create slides}
-\subtitle[Using beamer]{Using beamer}
-\author{Balajiganapathi S}
-\institute{code-drills.com}
-\logo{\includegraphics[height=0.25cm]{code-drills.png}}
-\date{\today} % Auto substitutes date. Freeze after completion
-
-% Before each section show outline with curent section bolded and only its subsections
-\AtBeginSection[]{\begin{frame}\frametitle{Outline}\tableofcontents[currentsection,hideothersubsections]\end{frame}}
-
-% Begin slides
-\begin{document}
-
-% Title page displays metadata
-\frame{\titlepage{}}
-
-% Table of contents of whole presentation; shows only section title
-\begin{frame}
-    \frametitle{Outline}
-    \tableofcontents[hideallsubsections]
-\end{frame}
-
+\include{../common/init}
 % Start a section/subsection
 \section{Getting started}
 \subsection{Setting up structure}

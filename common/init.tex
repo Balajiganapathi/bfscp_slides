@@ -1,0 +1,21 @@
+% Common presentation metadata
+\author{Balajiganapathi S}
+\institute{code-drills.com}
+\logo{\includegraphics[height=0.25cm]{code-drills.png}}
+\date{\today} % Auto substitutes date. Freeze after completion
+
+% Before each section show outline with curent section bolded and only its subsections
+\AtBeginSection[]{\begin{frame}\frametitle{Outline}\tableofcontents[currentsection,hideothersubsections]\end{frame}}
+
+% Begin slides
+\begin{document}
+
+% Title page displays metadata
+\frame{\titlepage{}}
+
+% Table of contents of whole presentation; shows only section title
+\begin{frame}
+    \frametitle{Outline}
+    \tableofcontents[hideallsubsections]
+\end{frame}
+
