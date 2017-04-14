@@ -1,0 +1,15 @@
+\frametitle{Code listing}
+
+    \begin{cppcode}{helloworld}{Hello World}
+        #include<iostream>
+
+        using namespace std;
+
+        int main() {
+            string name = "Balajiganapathi S";
+            int rank = 1;
+            double score = 100.0;
+            cout << "Hello, World!" << endl;
+            return 0;
+        }
+    \end{cppcode}
