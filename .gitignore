@@ -3,3 +3,7 @@
 *.aux
 *.pdf
 *.dvi
+*.nav
+*.out
+*.snm
+*.toc
