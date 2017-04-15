@@ -1,13 +1,12 @@
-\documentclass{beamer}
+\documentclass[aspectratio=169]{beamer}
 \usepackage{minted} % For code listing
 \usepackage{fancyvrb}
+\usepackage{etoolbox}
 
 % Useful macros
 % Display C/C++ codes
-\newenvironment{code}[2]
-%[language=c++,caption=#2,numbers=left,numbersep=5pt,listingname=Code,label=#1,style=colorful]
-{\VerbatimEnvironment \begin{minted}{C++}}
-{\end{minted}}
+\renewcommand\theFancyVerbLine{\tiny\arabic{FancyVerbLine}}
+\newminted{cpp}{linenos,numbersep=2pt,fontsize=\footnotesize}
 
 % Screenshot
 \newcommand{\screenshot}[1]
@@ -18,5 +17,3 @@
 
 % Before each section show outline with curent section bolded and only its subsections
 \AtBeginSection[]{\begin{frame}\frametitle{Outline}\tableofcontents[currentsection,hideothersubsections]\end{frame}}
-
-
