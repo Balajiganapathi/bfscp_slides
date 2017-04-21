@@ -1,40 +1,77 @@
 \include{../common/start}
 \title[Intro to CP]{Introduction to Competitive Programming}
-\subtitle[Get started with CP]{Get started with competitive programming}
+\subtitle[Get started with CP 2]{Get started with competitive programming - part 2}
 
 \include{../common/init}
 
 
 \section{Structure of a problem statement}
 \begin{frame}
+    \frametitle{Statement}
+    \href{http://codeforces.com/problemset/problem/796/A}{http://codeforces.com/problemset/problem/796/A}
+    \screenshot{screenshots/statement.png}
+\end{frame}
+
+\begin{frame}
     \frametitle{Statement - Story}
+    \screenshot{screenshots/statement_story.png}
 \end{frame}
 
 \begin{frame}
     \frametitle{Statement - Task}
+    \screenshot{screenshots/statement_task.png}
 \end{frame}
 
 \begin{frame}
     \frametitle{Statement - Input format}
+    \screenshot{screenshots/statement_input.png}
 \end{frame}
 
 \begin{frame}
     \frametitle{Statement - Output format}
-\end{frame}
-
-\begin{frame}
-    \frametitle{Statement - Constraints}
+    \screenshot{screenshots/statement_output.png}
 \end{frame}
 
 \begin{frame}
     \frametitle{Statement - Examples}
+    \screenshot{screenshots/statement_examples.png}
 \end{frame}
 
 \begin{frame}
     \frametitle{Statement - Time limit}
+    \screenshot{screenshots/statement_tl.png}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Statement - solution}
+    \begin{cppcode}
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int n, m, k, a, ans = 100000;
+    cin >> n >> m >> k;
+    for(int i = 1; i <= n; i++) {
+        cin >> a;
+        if(a != 0 && a <= k) ans = min(ans, 10 * abs(m - i));
+    }
+    cout << ans << endl;
+    
+    return 0;
+}
+    \end{cppcode}
 \end{frame}
 
 \section{Verdicts}
+\begin{frame}
+    \frametitle{How programs are evaluated}
+    \begin{itemize}
+        \item Problem setter uploads inputs and expected correct output \\ \pause
+        \item Programs are run against the inputs and compared to the expected output \\ \pause
+        \item Some program have multiple correct output - they are handled by a custom checker \\
+    \end{itemize}
+\end{frame}
+
 \begin{frame}
     \frametitle{Types of verdicts}
     \begin{itemize}
@@ -45,7 +82,6 @@
         \item Memory Limit Exceeded (TLE) \\ \pause
         \item Compile Error (CE) \\ \pause
         \item Presentation Error (PE) \\ 
-
     \end{itemize}
 \end{frame}
 
@@ -54,7 +90,7 @@
     \frametitle{Contest phases}
     \begin{itemize}
         \item SRM - coding phase, challenge phase, system test \\ \pause
-        \item Codeforces rounds - Pretests, hacks, system tests \\ \pause
+        \item Codeforces rounds - pretests, hacks, system tests \\ \pause
         \item Codechef - Immediate feedback \\
     \end{itemize}
 \end{frame}
@@ -62,20 +98,42 @@
 \begin{frame}
     \frametitle{Problem types}
     \begin{itemize}
-        \item Binary/classical \\ \pause
-        \item Partial \\ \pause
-        \item Challenge/approximate \\ \pause
-        \item Interactive \\
+        \item Binary/classical - either correct or wrong \\ \pause
+        \item Partial - subtasks with relaxed constraints \\ \pause
+        \item Challenge/approximate - No one correct answer, have a scoring formula \\ 
     \end{itemize}
 \end{frame}
 
 \section{Common mistakes}
+\begin{frame}[fragile]
+    \frametitle{Common mistakes - printing message}
+    \begin{cppcode}
+int main() {
+    int t;
+    cout << "Enter number of test cases"; // DO NOT DO THIS
+    cin >> t;
+    // ...
+}
+    \end{cppcode}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Common mistakes - not returning 0}
+    \begin{cppcode}
+int main() {
+    //...
+
+    return 0; // DO THIS
+}
+    \end{cppcode}
+\end{frame}
+
 \begin{frame}
-    \frametitle{Common mistakes}
+    \frametitle{Common mistakes - wrong I/O format}
     \begin{itemize}
-        \item Printing message \\ \pause
-        \item Not returning 0 \\ \pause
-        \item I/O Format error \\ \pause
+        \item \# of test cases \\ \pause
+        \item Outputting doubles, newlines etc. \\ \pause
+        \item Input whole lines, strings etc. \\
     \end{itemize}
 \end{frame}
 
@@ -94,6 +152,7 @@
 \section{Conclusion}
 \begin{frame}
     \frametitle{Thank you}
+    \href{https://code-drills.com/bfscp/modules/intro}{https://code-drills.com/bfscp/modules/intro}
 \end{frame}
 
 \end{document}
